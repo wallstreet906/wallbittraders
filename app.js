@@ -1,29 +1,15 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-// Set view engine to EJS
-app.set('view engine', 'ejs');
-app.set('views', './views');
+// Set public folder for static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware to serve static files (like CSS, images)
-app.use(express.static('public'));
-
-// Routes
+// Serve index.html
 app.get('/', (req, res) => {
-  res.render('home'); // Render home.ejs
-});
-
-app.get('/about', (req, res) => {
-  res.render('about'); // Render about.ejs
-});
-
-app.get('/mission', (req, res) => {
-  res.render('mission'); // Render mission.ejs
-});
-
-app.get('/contact', (req, res) => {
-  res.render('contact'); // Render contact.ejs
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Start the server

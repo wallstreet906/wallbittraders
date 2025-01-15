@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallbit Traders</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Wallbit Traders</h1>
+    <p>Your trusted partner in cryptocurrency investments.</p>
+    <blockquote>
+      <p>“The only thing I own of any significance beyond Tesla and SpaceX stock is Bitcoins and then some Ethereum and Dogecoin.”</p>
+      <p><strong>— SpaceX Founder, Elon Musk</strong></p>
+    </blockquote>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Addresses Section -->
+    <section id="addresses">
+      <h2>Investment Addresses</h2>
+      <div class="address-box">
+        <p><strong>BTC Address:</strong></p>
+        <p id="btc-address">bc1qs7me08p08q49y2wfvvuxx8qa7f8uz02y2mxwhq</p>
+        <button onclick="copyToClipboard('btc-address')">Copy BTC Address</button>
+      </div>
+      <div class="address-box">
+        <p><strong>ETH Address:</strong></p>
+        <p id="eth-address">0xAe29dFBEa4A76eF028c9aD1cbBf240ef877D385A</p>
+        <button onclick="copyToClipboard('eth-address')">Copy ETH Address</button>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about-us">
+      <h2>About Us</h2>
+      <p>
+        Wallbit is a forward-thinking investment management firm specializing in cryptocurrency and blockchain technologies. The firm focuses on delivering high returns through a diverse range of digital asset strategies, with a keen emphasis on risk management and market analysis. Wallbit aims to empower investors by providing expert guidance and innovative investment solutions in the rapidly evolving crypto space.
+      </p>
+      <p>
+        Founded during one of the most challenging periods in modern history, Wallbit Traders emerged as a beacon of hope and financial empowerment. In 2020, as the Covid-19 pandemic ravaged the global economy and sent stock markets across Europe and North America plummeting, many individuals were left uncertain about their financial futures. It was in this moment of crisis that Wallbit Traders was born, driven by a bold vision: to give people a chance to rebuild their wealth through innovative cryptocurrency investments.
+      </p>
+      <p>
+        What started as a small operation has grown into a global powerhouse. Today, Wallbit Traders manages a multibillion-dollar portfolio and operates across key financial hubs, including London, New York, Dubai, and Singapore. Our team of seasoned professionals—comprising blockchain experts, financial analysts, and customer success managers—ensures that every investor benefits from our industry-leading expertise.
+      </p>
+    </section>
+
+    <!-- Mission -->
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to provide a secure, transparent, and profitable Bitcoin investment platform that guarantees consistent returns for our users. By leveraging cutting-edge technology and expert market analysis, we ensure that every investment is optimized for growth. With a focus on risk management and strategic diversification, we empower investors to achieve financial freedom while minimizing exposure. Trust us to guide you through the evolving world of cryptocurrency, offering peace of mind and measurable results every step of the way.
+      </p>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:wallbitenquiries@gmail.com">wallbitenquiries@gmail.com</a></p>
+      <p>Address: 48 Wall St, New York City, NY</p>
+      <p>Phone: 212-971-5353</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Wallbit Traders. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function copyToClipboard(elementId) {
+      const textToCopy = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("Address copied!");
+      });
+    }
+  </script>
+</body>
+</html>
